@@ -1,4 +1,4 @@
-
+# Author : Joel Gomez
 
 CREATE COMPUTE MODULE getHello_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
