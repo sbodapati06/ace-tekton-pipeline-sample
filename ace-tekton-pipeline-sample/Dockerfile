@@ -4,6 +4,7 @@ COPY ace-tekton-pipeline-sample/source/JGRACEIVT /home/aceuser/JGRACEIVT
 RUN export LICENSE="accept" \
     && source /opt/ibm/ace-12/server/bin/mqsiprofile \
     && mkdir /home/aceuser/bars \
-    && mqsipackagebar -a ace-tekton-pipeline-sample/bars/jgr-cp4i-aceivt.bar -k JGRACEIVT \
-    && mqsibar -a ace-tekton-pipeline-sample/bars/jgr-cp4i-aceivt.bar -w /home/aceuser/ace-server \
+###     && mqsipackagebar -a ace-tekton-pipeline-sample/bars/jgr-cp4i-aceivt.bar -k JGRACEIVT \
+    && mqsipackagebar -a ace-tekton-pipeline-sample/bars/SB_HTTP_HEALTHCHECK.bar-k JGRACEIVT \
+    && mqsibar -a ace-tekton-pipeline-sample/bars/SB_HTTP_HEALTHCHECK.bar -w /home/aceuser/ace-server \
     && chmod -R 777 /home/aceuser/ace-server/run/JGRACEIVT
